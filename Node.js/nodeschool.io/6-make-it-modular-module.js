@@ -1,3 +1,5 @@
+// module using idiomatic convention
+
 module.exports = function(directory, extension, callback){
 	var fs = require('fs'),
 		path = require('path');
