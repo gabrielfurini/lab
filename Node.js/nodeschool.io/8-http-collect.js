@@ -10,11 +10,14 @@ http.get(url, function(response){
 	var charsReceived = 0,
 		stringReceived = '';
 
+	// collecting data and storing on variables
 	response.setEncoding('utf-8');
 	response.on('data', function(data){
 		charsReceived += data.length;
 		stringReceived += data;
 	});
+
+	// on request end, show data collected
 	response.on('end', function(end){
 		console.log(charsReceived);
 		console.log(stringReceived);
