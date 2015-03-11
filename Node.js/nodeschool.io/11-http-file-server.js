@@ -8,4 +8,5 @@ var server = http.createServer(function(request, response){
 	fs.createReadStream(process.argv[3]).pipe(response);
 });
 
+// listen server on the port passed as first command-line parameter
 server.listen(process.argv[2]);
